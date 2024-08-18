@@ -25,6 +25,3 @@ document.querySelector('#push').onclick = function(){
         
     }
 }
-document.querySelector('#push2').onclick = function(){
-    alert();
-}
