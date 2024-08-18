@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css.css">
-    <script type="text/javascript"></script>
+    <script src="js.js" type="text/javascript" ></script>
 </head>
 <body>
     <div class="container">
@@ -15,38 +15,6 @@
         </div>
         <div id="tasks"></div>
     </div>
-    <script>
-        document.querySelector('#push').onclick = function(){
-            if(document.querySelector('#newtask input').value.length == 0){
-                alert("Please Enter a Task")
-            }
-
-            else{
-                document.querySelector('#tasks').innerHTML += `
-                    <div class="task">
-                        <span style="align:left" id="taskname">
-                            ${document.querySelector('#newtask input').value}
-                        </span>
-                        <button class="delete">
-                            <i >Delete</i>
-                        </button>
-                    
-                    </div>
-                `;
-
-                var current_tasks = document.querySelectorAll(".delete");
-                for(var i=0; i<current_tasks.length; i++){
-                    current_tasks[i].onclick = function(){
-                        this.parentNode.remove();
-                    }
-                }
-            
-                
-            }
-        }
-        document.querySelector('#push2').onclick = function(){
-            alert();
-        }
-    </script>
+    
 </body>
 </html>
